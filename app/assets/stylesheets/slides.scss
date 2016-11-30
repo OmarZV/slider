@@ -13,6 +13,7 @@ input.vertical {
     }
     
     input[type='range']::-webkit-slider-runnable-track {
+      width: 10px;
       height: 10px;
       -webkit-appearance: none;
       color: #13bba4;
@@ -25,7 +26,7 @@ input.vertical {
       height: 10px;
       cursor: pointer;;
       background: #434343;
-      box-shadow: -80px 0 0 80px #43e5f7;
+      box-shadow: -290px 0 0 290px #43e5f7;
     }
 
 }
@@ -34,12 +35,12 @@ input[type="range"]::-moz-range-progress {
   background-color: #43e5f7; 
 }
 input[type="range"]::-moz-range-track {  
-  background-color: #9a5d61;
+  background-color: #9a905d;
 }
 /* IE*/
 input[type="range"]::-ms-fill-lower {
   background-color: #43e5f7; 
 }
 input[type="range"]::-ms-fill-upper {  
-  background-color: #9a5d61;
+  background-color: #9a905d;
 }

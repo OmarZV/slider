@@ -1,40 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Slider</title>
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-Germany
-Egypt
+Testing Input Slider
 <br>
 <br>
 Peru
 <br>
 <br>
+	<br>
+	<br>
+
+<br>
+<br>
+
+<div class="col-sm-4">
 <label for="fader">Volume</label>
 <input type="range" min="0" max="100" value="50" 
 	class="vertical" id="fader" orient="vertical" step="1" oninput="outputUpdate(value)">
-<br>
 <output for="fader" id="volume">50</output>	
+</div>
 	<br>
 	<br>
-	<label for="phone">Phone number:</label>
-<input name="phone" id="phone" type="tel" pattern="[2-9][0-9]{6}">
 
 <br>
 <br>
 
-<form action="formhandler.php">
-	<label for="firstname" accesskey="f">First name</label>
-	<input type="text" name="firstname" id="firstname" required>
-	<label for="lastname" accesskey="l">Last name</label>
-	<input type="text" name="lastname" id="lastname">
-	<input type="submit">
-</form>
+
 
 <br>
 <br>
@@ -63,6 +52,3 @@ Peru
 
 
 
-<%= yield %>
-  </body>
-</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slider</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+Germany
+Egypt
+<br>
+<br>
+Peru
+<br>
+<br>
+<label for="fader">Volume</label>
+<input type="range" min="0" max="100" value="50" 
+	class="vertical" id="fader" orient="vertical" step="1" oninput="outputUpdate(value)">
+<br>
+<output for="fader" id="volume">50</output>	
+	<br>
+	<br>
+	<label for="phone">Phone number:</label>
+<input name="phone" id="phone" type="tel" pattern="[2-9][0-9]{6}">
+
+<br>
+<br>
+
+<form action="formhandler.php">
+	<label for="firstname" accesskey="f">First name</label>
+	<input type="text" name="firstname" id="firstname" required>
+	<label for="lastname" accesskey="l">Last name</label>
+	<input type="text" name="lastname" id="lastname">
+	<input type="submit">
+</form>
+
+<br>
+<br>
+<label for="state" accesskey="s">State / Province / Territory</label>
+<select name="state" id=state">
+	<option value="">-- choose one --
+	<optgroup label="NYC">
+		<option value="AL">Cloth Shopping
+		<option value="CA">Food & Groceries
+		<option> … remaining US states … 
+	</optgroup>
+	<optgroup label="Austin">
+		<option value="AB">Alberta
+		<option value="CA">British Columbia
+		<option> … remaining provinces and territories … 
+	</optgroup>
+</select>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<%= yield %>
+  </body>
+</html>

@@ -8,7 +8,7 @@ input.vertical {
       overflow: hidden;
       width: 80px;
       -webkit-appearance: none;
-      background-color: #9a905d;
+      background-color: #db0000;
       cursor:pointer;
     }
     
@@ -26,13 +26,13 @@ input.vertical {
       height: 10px;
       cursor: pointer;;
       background: #434343;
-      box-shadow: -290px 0 0 290px #43e5f7;
+      box-shadow: -300px 0 0 300px #469f0e;
     }
 
 }
 /** FF*/
 input[type="range"]::-moz-range-progress {
-  background-color: #43e5f7; 
+  background-color: #469f0e; 
 }
 input[type="range"]::-moz-range-track {  
   background-color: #9a905d;

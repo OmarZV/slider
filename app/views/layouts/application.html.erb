@@ -7,8 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-   <body>
+ <body>
   
   <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -26,12 +25,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-      	<li class="active">Home</li>        
-        <li>Author Chat</li>        
+      	<li class="active"><%= link_to 'Home',events_path %></li>        
+        <li><%= link_to 'Author Chat',chatrooms_path %></li>        
       </ul>
        <div class="collapse navbar-collapse" id="navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-            <li>Book Bazar</li>          
+            <li><%= link_to 'Book Bazar',books_path %></li>          
             <% if current_user %>
             
             
@@ -41,7 +40,7 @@
             <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
             <ul class="dropdown-menu">
-            <li>Platform Users</li>            
+            <li><%= link_to "Platform Users", users_path %></li>            
             <li role="separator" class="divider"></li>
             <li><%= link_to 'Settings',edit_user_registration_path %></li>
             <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>

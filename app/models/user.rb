@@ -8,6 +8,14 @@ class User < ApplicationRecord
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   
   
+  has_many :likes
+	has_many :events
+	has_many :notifications, foreign_key: :recipient_id
+	has_many :chatroom_users
+	has_many :chatrooms, through: :chatroom_users
+	has_many :messages
+	has_one :ranking
+  
   
   
    def self.from_omniauth(auth)
@@ -18,6 +26,10 @@ class User < ApplicationRecord
       user.avatar = URI.parse(auth.info.image)
     end
   end
+  
+  def likes?(post)
+		post.likes.where(user_id: id).any?
+	end	
 
 
 end
